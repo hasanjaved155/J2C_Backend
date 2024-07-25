@@ -27,7 +27,7 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'https://j2-c-frontend.vercel.app',
+    origin: 'https://j2c.vercel.app',
     credentials: true
 };
 
