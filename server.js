@@ -27,7 +27,7 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'https://j2-c-frontend-hyu6troug-javed-hasans-projects.vercel.app/',
+    origin: 'https://j2-c-frontend.vercel.app/',
     credentials: true
 };
 
