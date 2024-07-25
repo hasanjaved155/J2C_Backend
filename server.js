@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser"
 import connectDB from './config/db.js';
 
 import UserRoutes from './routes/UserRoutes.js';
+
 import CourseRoutes from './routes/CourseRoutes.js';
 import CategoryRoutes from './routes/categoryRoutes.js';
 import CartRoutes from './routes/CartRoutes.js';
