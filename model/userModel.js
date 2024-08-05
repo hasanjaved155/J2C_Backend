@@ -25,6 +25,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "subscriber"
     },
+    myCourse: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'course'
+        }
+    ],
     cart: [
         {
             type: mongoose.Schema.Types.ObjectId,
