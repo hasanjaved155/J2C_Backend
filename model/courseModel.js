@@ -29,6 +29,14 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    courseInfo: {
+        type: String,
+        required: true,
+    },
+    authorName: {
+        type: String,
+        required: true,
+    },
     // viewCount: {
     //     type: Number,
     //     default: 0
