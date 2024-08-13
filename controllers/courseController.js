@@ -2,7 +2,7 @@ import courseModel from "../model/courseModel.js";
 
 export const createCourseController = async (req, res) => {
     try {
-        const { path, courseName, folderId, image, courseTitle, role } = req.body;
+        const { path, courseName, folderId, image, courseTitle, role, authorName, courseInfo } = req.body;
 
         if (!path) {
             return res.send({ message: 'Path is Required' })
@@ -16,6 +16,13 @@ export const createCourseController = async (req, res) => {
         }
         if (!image) {
             return res.send({ message: 'Image is Required' })
+        }
+
+        if (!authorName) {
+            return res.send({ message: 'AuthorName is Required' })
+        }
+        if (!courseInfo) {
+            return res.send({ message: 'Course Information is Required' })
         }
 
         if (!courseTitle) {
@@ -35,7 +42,7 @@ export const createCourseController = async (req, res) => {
             })
         }
 
-        const course = new courseModel({ path, courseName, folderId, image, courseTitle, role });
+        const course = new courseModel({ path, courseName, folderId, image, courseTitle, role, authorName, courseInfo });
         await course.save();
 
         res.status(201).send({
